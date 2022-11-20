@@ -12,10 +12,10 @@ const PokemonCard = ({ url }) => {
     axios.get(url).then((data) => {
       setPokemon(data);
     });
-  }, []);
+  }, [url]);
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} className="col-3 mt-2">
       <CardMedia
         component="img"
         height="140"
